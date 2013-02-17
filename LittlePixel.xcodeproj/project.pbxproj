@@ -23,7 +23,7 @@
 		4F919FC516D18A8400805883 /* LittlePixelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F919FC416D18A8400805883 /* LittlePixelTests.m */; };
 		4F919FD116D18B2600805883 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F919FD016D18B2600805883 /* QuartzCore.framework */; };
 		4F919FD716D18B7C00805883 /* LPBaseGameplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F919FD616D18B7C00805883 /* LPBaseGameplayView.m */; };
-		4F919FDA16D18B9100805883 /* LPBaseGameplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F919FD916D18B9100805883 /* LPBaseGameplayViewController.m */; };
+		4FCA1E9C16D195D800FAE32F /* LPBaseGameplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCA1E9B16D195D800FAE32F /* LPBaseGameplayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +59,8 @@
 		4F919FD016D18B2600805883 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4F919FD516D18B7C00805883 /* LPBaseGameplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPBaseGameplayView.h; path = Views/LPBaseGameplayView.h; sourceTree = "<group>"; };
 		4F919FD616D18B7C00805883 /* LPBaseGameplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPBaseGameplayView.m; path = Views/LPBaseGameplayView.m; sourceTree = "<group>"; };
-		4F919FD816D18B9100805883 /* LPBaseGameplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPBaseGameplayViewController.h; sourceTree = "<group>"; };
-		4F919FD916D18B9100805883 /* LPBaseGameplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPBaseGameplayViewController.m; sourceTree = "<group>"; };
+		4FCA1E9A16D195D800FAE32F /* LPBaseGameplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPBaseGameplayViewController.h; path = "View Controllers/LPBaseGameplayViewController.h"; sourceTree = "<group>"; };
+		4FCA1E9B16D195D800FAE32F /* LPBaseGameplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPBaseGameplayViewController.m; path = "View Controllers/LPBaseGameplayViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,8 +176,8 @@
 		4F919FCF16D18AFE00805883 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4F919FD816D18B9100805883 /* LPBaseGameplayViewController.h */,
-				4F919FD916D18B9100805883 /* LPBaseGameplayViewController.m */,
+				4FCA1E9A16D195D800FAE32F /* LPBaseGameplayViewController.h */,
+				4FCA1E9B16D195D800FAE32F /* LPBaseGameplayViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -295,7 +295,7 @@
 				4F919FA616D18A8400805883 /* main.m in Sources */,
 				4F919FAA16D18A8400805883 /* LPAppDelegate.m in Sources */,
 				4F919FD716D18B7C00805883 /* LPBaseGameplayView.m in Sources */,
-				4F919FDA16D18B9100805883 /* LPBaseGameplayViewController.m in Sources */,
+				4FCA1E9C16D195D800FAE32F /* LPBaseGameplayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +468,7 @@
 				4F919FCA16D18A8400805883 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4F919FCB16D18A8400805883 /* Build configuration list for PBXNativeTarget "LittlePixelTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +477,7 @@
 				4F919FCD16D18A8400805883 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
