@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F919F9A16D18A8400805883 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F919F9916D18A8400805883 /* UIKit.framework */; };
+		4F919F9C16D18A8400805883 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F919F9B16D18A8400805883 /* Foundation.framework */; };
+		4F919F9E16D18A8400805883 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F919F9D16D18A8400805883 /* CoreGraphics.framework */; };
+		4F919FA416D18A8400805883 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F919FA216D18A8400805883 /* InfoPlist.strings */; };
+		4F919FA616D18A8400805883 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F919FA516D18A8400805883 /* main.m */; };
+		4F919FAA16D18A8400805883 /* LPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F919FA916D18A8400805883 /* LPAppDelegate.m */; };
+		4F919FAC16D18A8400805883 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F919FAB16D18A8400805883 /* Default.png */; };
+		4F919FAE16D18A8400805883 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F919FAD16D18A8400805883 /* Default@2x.png */; };
+		4F919FB016D18A8400805883 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F919FAF16D18A8400805883 /* Default-568h@2x.png */; };
+		4F919FB816D18A8400805883 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F919FB716D18A8400805883 /* SenTestingKit.framework */; };
+		4F919FB916D18A8400805883 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F919F9916D18A8400805883 /* UIKit.framework */; };
+		4F919FBA16D18A8400805883 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F919F9B16D18A8400805883 /* Foundation.framework */; };
+		4F919FC216D18A8400805883 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F919FC016D18A8400805883 /* InfoPlist.strings */; };
+		4F919FC516D18A8400805883 /* LittlePixelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F919FC416D18A8400805883 /* LittlePixelTests.m */; };
+		4F919FD116D18B2600805883 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F919FD016D18B2600805883 /* QuartzCore.framework */; };
+		4F919FD716D18B7C00805883 /* LPBaseGameplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F919FD616D18B7C00805883 /* LPBaseGameplayView.m */; };
+		4F919FDA16D18B9100805883 /* LPBaseGameplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F919FD916D18B9100805883 /* LPBaseGameplayViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F919FBB16D18A8400805883 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F919F8E16D18A8400805883 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F919F9516D18A8400805883;
+			remoteInfo = LittlePixel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4F919F9616D18A8400805883 /* LittlePixel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittlePixel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F919F9916D18A8400805883 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4F919F9B16D18A8400805883 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4F919F9D16D18A8400805883 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4F919FA116D18A8400805883 /* LittlePixel-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LittlePixel-Info.plist"; sourceTree = "<group>"; };
+		4F919FA316D18A8400805883 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4F919FA516D18A8400805883 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4F919FA716D18A8400805883 /* LittlePixel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LittlePixel-Prefix.pch"; sourceTree = "<group>"; };
+		4F919FA816D18A8400805883 /* LPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPAppDelegate.h; sourceTree = "<group>"; };
+		4F919FA916D18A8400805883 /* LPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPAppDelegate.m; sourceTree = "<group>"; };
+		4F919FAB16D18A8400805883 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4F919FAD16D18A8400805883 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4F919FAF16D18A8400805883 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4F919FB616D18A8400805883 /* LittlePixelTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LittlePixelTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F919FB716D18A8400805883 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		4F919FBF16D18A8400805883 /* LittlePixelTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LittlePixelTests-Info.plist"; sourceTree = "<group>"; };
+		4F919FC116D18A8400805883 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4F919FC316D18A8400805883 /* LittlePixelTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LittlePixelTests.h; sourceTree = "<group>"; };
+		4F919FC416D18A8400805883 /* LittlePixelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LittlePixelTests.m; sourceTree = "<group>"; };
+		4F919FD016D18B2600805883 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4F919FD516D18B7C00805883 /* LPBaseGameplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPBaseGameplayView.h; path = Views/LPBaseGameplayView.h; sourceTree = "<group>"; };
+		4F919FD616D18B7C00805883 /* LPBaseGameplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPBaseGameplayView.m; path = Views/LPBaseGameplayView.m; sourceTree = "<group>"; };
+		4F919FD816D18B9100805883 /* LPBaseGameplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPBaseGameplayViewController.h; sourceTree = "<group>"; };
+		4F919FD916D18B9100805883 /* LPBaseGameplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPBaseGameplayViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F919F9316D18A8400805883 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F919FD116D18B2600805883 /* QuartzCore.framework in Frameworks */,
+				4F919F9A16D18A8400805883 /* UIKit.framework in Frameworks */,
+				4F919F9C16D18A8400805883 /* Foundation.framework in Frameworks */,
+				4F919F9E16D18A8400805883 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F919FB216D18A8400805883 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F919FB816D18A8400805883 /* SenTestingKit.framework in Frameworks */,
+				4F919FB916D18A8400805883 /* UIKit.framework in Frameworks */,
+				4F919FBA16D18A8400805883 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F919F8D16D18A8400805883 = {
+			isa = PBXGroup;
+			children = (
+				4F919F9F16D18A8400805883 /* LittlePixel */,
+				4F919FBD16D18A8400805883 /* LittlePixelTests */,
+				4F919F9816D18A8400805883 /* Frameworks */,
+				4F919F9716D18A8400805883 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4F919F9716D18A8400805883 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F919F9616D18A8400805883 /* LittlePixel.app */,
+				4F919FB616D18A8400805883 /* LittlePixelTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F919F9816D18A8400805883 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F919FD016D18B2600805883 /* QuartzCore.framework */,
+				4F919F9916D18A8400805883 /* UIKit.framework */,
+				4F919F9B16D18A8400805883 /* Foundation.framework */,
+				4F919F9D16D18A8400805883 /* CoreGraphics.framework */,
+				4F919FB716D18A8400805883 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F919F9F16D18A8400805883 /* LittlePixel */ = {
+			isa = PBXGroup;
+			children = (
+				4F919FA816D18A8400805883 /* LPAppDelegate.h */,
+				4F919FA916D18A8400805883 /* LPAppDelegate.m */,
+				4F919FCF16D18AFE00805883 /* View Controllers */,
+				4F919FCE16D18AF700805883 /* Views */,
+				4F919FA016D18A8400805883 /* Supporting Files */,
+			);
+			path = LittlePixel;
+			sourceTree = "<group>";
+		};
+		4F919FA016D18A8400805883 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F919FA116D18A8400805883 /* LittlePixel-Info.plist */,
+				4F919FA216D18A8400805883 /* InfoPlist.strings */,
+				4F919FA516D18A8400805883 /* main.m */,
+				4F919FA716D18A8400805883 /* LittlePixel-Prefix.pch */,
+				4F919FAB16D18A8400805883 /* Default.png */,
+				4F919FAD16D18A8400805883 /* Default@2x.png */,
+				4F919FAF16D18A8400805883 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4F919FBD16D18A8400805883 /* LittlePixelTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F919FC316D18A8400805883 /* LittlePixelTests.h */,
+				4F919FC416D18A8400805883 /* LittlePixelTests.m */,
+				4F919FBE16D18A8400805883 /* Supporting Files */,
+			);
+			path = LittlePixelTests;
+			sourceTree = "<group>";
+		};
+		4F919FBE16D18A8400805883 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F919FBF16D18A8400805883 /* LittlePixelTests-Info.plist */,
+				4F919FC016D18A8400805883 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4F919FCE16D18AF700805883 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4F919FD516D18B7C00805883 /* LPBaseGameplayView.h */,
+				4F919FD616D18B7C00805883 /* LPBaseGameplayView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4F919FCF16D18AFE00805883 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4F919FD816D18B9100805883 /* LPBaseGameplayViewController.h */,
+				4F919FD916D18B9100805883 /* LPBaseGameplayViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F919F9516D18A8400805883 /* LittlePixel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F919FC816D18A8400805883 /* Build configuration list for PBXNativeTarget "LittlePixel" */;
+			buildPhases = (
+				4F919F9216D18A8400805883 /* Sources */,
+				4F919F9316D18A8400805883 /* Frameworks */,
+				4F919F9416D18A8400805883 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LittlePixel;
+			productName = LittlePixel;
+			productReference = 4F919F9616D18A8400805883 /* LittlePixel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4F919FB516D18A8400805883 /* LittlePixelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F919FCB16D18A8400805883 /* Build configuration list for PBXNativeTarget "LittlePixelTests" */;
+			buildPhases = (
+				4F919FB116D18A8400805883 /* Sources */,
+				4F919FB216D18A8400805883 /* Frameworks */,
+				4F919FB316D18A8400805883 /* Resources */,
+				4F919FB416D18A8400805883 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F919FBC16D18A8400805883 /* PBXTargetDependency */,
+			);
+			name = LittlePixelTests;
+			productName = LittlePixelTests;
+			productReference = 4F919FB616D18A8400805883 /* LittlePixelTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F919F8E16D18A8400805883 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LP;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Noah Blake";
+			};
+			buildConfigurationList = 4F919F9116D18A8400805883 /* Build configuration list for PBXProject "LittlePixel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4F919F8D16D18A8400805883;
+			productRefGroup = 4F919F9716D18A8400805883 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F919F9516D18A8400805883 /* LittlePixel */,
+				4F919FB516D18A8400805883 /* LittlePixelTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F919F9416D18A8400805883 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F919FA416D18A8400805883 /* InfoPlist.strings in Resources */,
+				4F919FAC16D18A8400805883 /* Default.png in Resources */,
+				4F919FAE16D18A8400805883 /* Default@2x.png in Resources */,
+				4F919FB016D18A8400805883 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F919FB316D18A8400805883 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F919FC216D18A8400805883 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F919FB416D18A8400805883 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F919F9216D18A8400805883 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F919FA616D18A8400805883 /* main.m in Sources */,
+				4F919FAA16D18A8400805883 /* LPAppDelegate.m in Sources */,
+				4F919FD716D18B7C00805883 /* LPBaseGameplayView.m in Sources */,
+				4F919FDA16D18B9100805883 /* LPBaseGameplayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F919FB116D18A8400805883 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F919FC516D18A8400805883 /* LittlePixelTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F919FBC16D18A8400805883 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F919F9516D18A8400805883 /* LittlePixel */;
+			targetProxy = 4F919FBB16D18A8400805883 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4F919FA216D18A8400805883 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F919FA316D18A8400805883 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4F919FC016D18A8400805883 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F919FC116D18A8400805883 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F919FC616D18A8400805883 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F919FC716D18A8400805883 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4F919FC916D18A8400805883 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LittlePixel/LittlePixel-Prefix.pch";
+				INFOPLIST_FILE = "LittlePixel/LittlePixel-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4F919FCA16D18A8400805883 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LittlePixel/LittlePixel-Prefix.pch";
+				INFOPLIST_FILE = "LittlePixel/LittlePixel-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4F919FCC16D18A8400805883 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LittlePixel.app/LittlePixel";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LittlePixel/LittlePixel-Prefix.pch";
+				INFOPLIST_FILE = "LittlePixelTests/LittlePixelTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4F919FCD16D18A8400805883 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LittlePixel.app/LittlePixel";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LittlePixel/LittlePixel-Prefix.pch";
+				INFOPLIST_FILE = "LittlePixelTests/LittlePixelTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F919F9116D18A8400805883 /* Build configuration list for PBXProject "LittlePixel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F919FC616D18A8400805883 /* Debug */,
+				4F919FC716D18A8400805883 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F919FC816D18A8400805883 /* Build configuration list for PBXNativeTarget "LittlePixel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F919FC916D18A8400805883 /* Debug */,
+				4F919FCA16D18A8400805883 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4F919FCB16D18A8400805883 /* Build configuration list for PBXNativeTarget "LittlePixelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F919FCC16D18A8400805883 /* Debug */,
+				4F919FCD16D18A8400805883 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F919F8E16D18A8400805883 /* Project object */;
+}
