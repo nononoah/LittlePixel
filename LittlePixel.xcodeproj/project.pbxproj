@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D213F7C16D276B60067CEAD /* LPLittlePixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D213F7B16D276B60067CEAD /* LPLittlePixel.m */; };
+		1D213F7F16D278DB0067CEAD /* LPLittleDeath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D213F7E16D278DB0067CEAD /* LPLittleDeath.m */; };
 		4F919F9A16D18A8400805883 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F919F9916D18A8400805883 /* UIKit.framework */; };
 		4F919F9C16D18A8400805883 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F919F9B16D18A8400805883 /* Foundation.framework */; };
 		4F919F9E16D18A8400805883 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F919F9D16D18A8400805883 /* CoreGraphics.framework */; };
@@ -37,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D213F7A16D276B60067CEAD /* LPLittlePixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPLittlePixel.h; path = Views/LPLittlePixel.h; sourceTree = "<group>"; };
+		1D213F7B16D276B60067CEAD /* LPLittlePixel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPLittlePixel.m; path = Views/LPLittlePixel.m; sourceTree = "<group>"; };
+		1D213F7D16D278DB0067CEAD /* LPLittleDeath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPLittleDeath.h; path = Views/LPLittleDeath.h; sourceTree = "<group>"; };
+		1D213F7E16D278DB0067CEAD /* LPLittleDeath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPLittleDeath.m; path = Views/LPLittleDeath.m; sourceTree = "<group>"; };
 		4F919F9616D18A8400805883 /* LittlePixel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittlePixel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F919F9916D18A8400805883 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4F919F9B16D18A8400805883 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -169,6 +175,10 @@
 			children = (
 				4F919FD516D18B7C00805883 /* LPBaseGameplayView.h */,
 				4F919FD616D18B7C00805883 /* LPBaseGameplayView.m */,
+				1D213F7A16D276B60067CEAD /* LPLittlePixel.h */,
+				1D213F7B16D276B60067CEAD /* LPLittlePixel.m */,
+				1D213F7D16D278DB0067CEAD /* LPLittleDeath.h */,
+				1D213F7E16D278DB0067CEAD /* LPLittleDeath.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -296,6 +306,8 @@
 				4F919FAA16D18A8400805883 /* LPAppDelegate.m in Sources */,
 				4F919FD716D18B7C00805883 /* LPBaseGameplayView.m in Sources */,
 				4FCA1E9C16D195D800FAE32F /* LPBaseGameplayViewController.m in Sources */,
+				1D213F7C16D276B60067CEAD /* LPLittlePixel.m in Sources */,
+				1D213F7F16D278DB0067CEAD /* LPLittleDeath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

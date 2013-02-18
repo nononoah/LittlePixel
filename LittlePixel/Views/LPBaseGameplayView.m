@@ -6,67 +6,83 @@
 //  Copyright (c) 2013 Noah Blake. All rights reserved.
 //
 
+#import "LPBaseGameplayViewController.h"
 #import "LPBaseGameplayView.h"
+#import "LPLittlePixel.h"
+#import "LPLittleDeath.h"
 
 @implementation LPBaseGameplayView
+static LPBaseGameplayViewController *_inController = nil;
+static bool _alive = YES;
 
-- (id) initWithFrame: (CGRect) frame
+- (id) initWithFrame: (CGRect) frame andController: (LPBaseGameplayViewController *) inController
 {
 	self = [super initWithFrame: frame];
 	if (self) {
-		// Initialization code
-		self.backgroundColor = [UIColor blackColor];
+        _inController = inController;
+        _frameCounter = 0;
+        _alive = YES;
         
-		//Create the blaster
-		_littlePixel = [[UIView alloc] initWithFrame: CGRectMake(40, 300, 30, 30)];
-		[_littlePixel setBackgroundColor: [UIColor whiteColor]];
+		self.backgroundColor = [UIColor blackColor];
+        _arrayOfLittleDeath = [[NSMutableArray array] retain];
+        
+		//Create little pixel
+		_littlePixel = [[LPLittlePixel alloc] initWithFrame:  CGRectMake(40, 300, 30, 30) andWithinView: self];
 		[self addSubview:_littlePixel];
         
-		//Create a target for blasting
-		_littleDeath = [[UIView alloc] initWithFrame: CGRectMake(80, 10, 20, 20)];
-		[_littleDeath setBackgroundColor: [UIColor redColor]];
-		[self addSubview: _littleDeath];
+		//Create a little death
+		[self addLittleDeath];
         
-		//target initially moves to lower right.
-		_dx = 2;
-		_dy = 2;
 	}
 	return self;
 }
 
+- (void) addLittleDeath
+{
+    LPLittleDeath *tmpLittleDeath = [[[LPLittleDeath alloc] initWithFrame: [LPLittleDeath randomFrame] andWithinView: self] autorelease];
+    [tmpLittleDeath setBackgroundColor: [UIColor redColor]];
+    [self addSubview: tmpLittleDeath];
+    [_arrayOfLittleDeath addObject: tmpLittleDeath];
+}
+
 - (void) deathRain
 {
-	CGRect tmpRectNextPosition = _littleDeath.frame;
-	tmpRectNextPosition.origin.x += _dx;
-    tmpRectNextPosition.origin.y += _dy;
-}
-
-
-- (void) touchesMoved: (NSSet *) inTouches withEvent: (UIEvent *) inEvent {
-	UITouch *tmpTouch = [inTouches anyObject];
-	CGPoint tmpTouchPoint = [tmpTouch locationInView: self];
-	CGFloat tmpxPosition = tmpTouchPoint.x;
-    CGFloat tmpyPosition = tmpTouchPoint.y;
-	
-	//Don't let little pixel escape the view
-	CGFloat halfOfLittlePixelx = _littlePixel.bounds.size.width / 2;
-    //don't fly off the left, little pixel gets what's bigger, the functional left edge, or the x-position. Gets x-position if it's not off the screen.
-	tmpxPosition = MAX(tmpxPosition, halfOfLittlePixelx);
-	tmpxPosition = MIN(tmpxPosition, self.bounds.size.width - halfOfLittlePixelx); //don't fly off the right
+    for (LPLittleDeath *tmpLittleDeath in _arrayOfLittleDeath)
+    {
+        CGRect tmpRectNextPosition = tmpLittleDeath.frame;
+        tmpRectNextPosition.origin.x += tmpLittleDeath.dx;
+        tmpRectNextPosition.origin.y += tmpLittleDeath.dy;
     
-    CGFloat halfOfLittlePixely = _littlePixel.bounds.size.height / 2;
-    //not off the top
-    tmpyPosition = MAX(tmpyPosition, halfOfLittlePixely);
-    //not off the bottom
-	tmpyPosition = MIN(tmpyPosition, self.bounds.size.height - halfOfLittlePixely - [[UIApplication sharedApplication] statusBarFrame].size.height);
-	
-	_littlePixel.center = CGPointMake(tmpxPosition, tmpyPosition);
-	[self deathRain];
+        if (CGRectIntersectsRect(tmpRectNextPosition, _littlePixel.frame))
+        {
+           //you died
+            _alive = NO;
+            [_inController littlePixelDied];
+        }
+    }
 }
 
-- (void) surviving: (CADisplayLink *) displayLink {
-	_littleDeath.center = CGPointMake(_littleDeath.center.x + _dx, _littleDeath.center.y + _dy);
-	[self deathRain];
+
+- (void) surviving: (CADisplayLink *) displayLink
+{
+    if (_alive)
+    {
+        for (LPLittleDeath *tmpLittleDeath in _arrayOfLittleDeath)
+        {
+            //move each little death
+            [tmpLittleDeath raining];
+        }
+    
+        //control the rate of death spawn
+        _frameCounter++;
+        if (_frameCounter == 30)
+        {
+            [self addLittleDeath];
+            _frameCounter -= 30;
+        }
+    
+        [self deathRain];
+    }
 }
 
 @end

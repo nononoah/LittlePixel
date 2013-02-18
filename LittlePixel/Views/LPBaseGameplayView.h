@@ -7,13 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+@class LPLittlePixel;
+@class LPBaseGameplayViewController;
 
 @interface LPBaseGameplayView : UIView
 {
-    UIView *_littlePixel;
-	UIView *_littleDeath;
-	CGFloat _dx, _dy;
+    LPLittlePixel *_littlePixel;
+	NSMutableArray *_arrayOfLittleDeath;
+    float _dx, _dy;
+    int _frameCounter;
 }
 
+- (id) initWithFrame: (CGRect) frame andController: (LPBaseGameplayViewController *) inController;
 - (void) surviving: (CADisplayLink *) displayLink;
+- (void) deathRain;
+
 @end

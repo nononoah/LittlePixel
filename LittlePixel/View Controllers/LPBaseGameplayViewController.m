@@ -30,6 +30,7 @@
     self = [super init];
     if (self) {
         // Custom initialization
+        [self.view setBackgroundColor: [UIColor whiteColor]];
     }
     return self;
 }
@@ -39,15 +40,42 @@
     [super viewDidLoad];
     
     CGRect tmpFrame = {0, 0, 320, 480};
-    LPBaseGameplayView *tmpLevelOneView = [[LPBaseGameplayView alloc] initWithFrame: tmpFrame];
-    [self.view addSubview: tmpLevelOneView];
-    [tmpLevelOneView release];
+    _currentGameplayView = [[LPBaseGameplayView alloc] initWithFrame: tmpFrame andController: self];
+    [self.view addSubview: _currentGameplayView];
+    [_currentGameplayView release];
 	
-    _displayLink = [CADisplayLink displayLinkWithTarget: tmpLevelOneView selector: @selector(surviving:)];
+    _displayLink = [CADisplayLink displayLinkWithTarget:_currentGameplayView selector: @selector(surviving:)];
 	_displayLink.frameInterval = 1;
     
-	NSRunLoop *loop = [NSRunLoop currentRunLoop];
-	[_displayLink addToRunLoop: loop forMode: NSDefaultRunLoopMode];
+	[_displayLink addToRunLoop: [NSRunLoop currentRunLoop] forMode: NSDefaultRunLoopMode];
+}
+
+- (void) littlePixelDied
+{
+	[_displayLink invalidate];
+    [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    DLog(@"CurrentGameplayView reference count %i", _currentGameplayView.retainCount);
+    
+    UIButton *tmpRestartButton = [UIButton buttonWithType: UIButtonTypeCustom];
+    [tmpRestartButton setFrame: CGRectMake(self.view.center.x - 75, self.view.center.y - 25, 150 , 50)];
+    [tmpRestartButton setTitle: @"Little Pixel lives?" forState: UIControlStateNormal];
+    [tmpRestartButton setBackgroundColor: [UIColor grayColor]];
+    [tmpRestartButton addTarget: self action: @selector(restart:) forControlEvents: UIControlEventAllTouchEvents];
+    [self.view addSubview: tmpRestartButton];
+}
+
+- (void) restart: (UIButton *) inSender
+{
+    [inSender removeFromSuperview];
+    
+    CGRect tmpFrame = {0, 0, 320, 480};
+    _currentGameplayView = [[LPBaseGameplayView alloc] initWithFrame: tmpFrame andController: self];
+    [self.view addSubview: _currentGameplayView];
+    [_currentGameplayView release];
+	
+    _displayLink = [CADisplayLink displayLinkWithTarget:_currentGameplayView selector: @selector(surviving:)];
+	_displayLink.frameInterval = 1;
+	[_displayLink addToRunLoop: [NSRunLoop currentRunLoop] forMode: NSDefaultRunLoopMode];
 }
 
 - (void)didReceiveMemoryWarning

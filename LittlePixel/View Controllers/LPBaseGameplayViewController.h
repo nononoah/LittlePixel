@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+@class LPBaseGameplayView;
 
 @interface LPBaseGameplayViewController : UIViewController
-
+{
+    LPBaseGameplayView *_currentGameplayView;
+}
+- (void) littlePixelDied;
 @end
