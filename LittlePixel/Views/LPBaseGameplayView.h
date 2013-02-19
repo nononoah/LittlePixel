@@ -12,14 +12,16 @@
 
 @interface LPBaseGameplayView : UIView
 {
-    LPLittlePixel *_littlePixel;
-	NSMutableArray *_arrayOfLittleDeath;
-    float _dx, _dy;
-    int _frameCounter;
+    int _difficultyIncrementer;
+    NSTimer *_spawnTimer;
 }
+
+@property (nonatomic, retain) NSMutableArray *arrayOfLittleDeath;
+@property (nonatomic, retain) LPLittlePixel *littlePixel;
+@property (nonatomic, retain) LPBaseGameplayViewController *controller;
+
 
 - (id) initWithFrame: (CGRect) frame andController: (LPBaseGameplayViewController *) inController;
 - (void) surviving: (CADisplayLink *) displayLink;
-- (void) deathRain;
 
 @end

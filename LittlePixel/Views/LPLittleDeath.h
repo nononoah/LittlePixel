@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class LPBaseGameplayView;
+#import "LPBaseGameplayView.h"
 
 @interface LPLittleDeath : UIView
 {

@@ -15,7 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         _gameplayView = inView;
-        [self setBackgroundColor: [UIColor whiteColor]];
+        [self setBackgroundColor: [UIColor blackColor]];
     }
     return self;
 }
@@ -39,7 +39,11 @@
 	tmpyPosition = MIN(tmpyPosition, _gameplayView.bounds.size.height - halfOfLittlePixely - [[UIApplication sharedApplication] statusBarFrame].size.height);
 	
 	self.center = CGPointMake(tmpxPosition, tmpyPosition);
-	[_gameplayView deathRain];
+}
+
+- (void) dealloc
+{
+    [super dealloc];
 }
 
 @end

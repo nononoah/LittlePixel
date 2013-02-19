@@ -19,7 +19,7 @@
 
 @interface LPBaseGameplayViewController ()
 {
-    CADisplayLink *_displayLink;
+    CADisplayLink *displayLink;
 }
 @end
 
@@ -39,28 +39,27 @@
 {
     [super viewDidLoad];
     
-    CGRect tmpFrame = {0, 0, 320, 480};
-    _currentGameplayView = [[LPBaseGameplayView alloc] initWithFrame: tmpFrame andController: self];
-    [self.view addSubview: _currentGameplayView];
-    [_currentGameplayView release];
+    CGRect tmpFrame = {0, 0, self.view.frame.size.width, self.view.frame.size.height};
+    LPBaseGameplayView *tmpView = [[LPBaseGameplayView alloc] initWithFrame: tmpFrame andController: self];
+    [self.view addSubview: tmpView];
+    [tmpView release];
 	
-    _displayLink = [CADisplayLink displayLinkWithTarget:_currentGameplayView selector: @selector(surviving:)];
-	_displayLink.frameInterval = 1;
+    CADisplayLink *tmpDisplayLink = [CADisplayLink displayLinkWithTarget: tmpView selector: @selector(surviving:)];
+	tmpDisplayLink.frameInterval = 1;
     
-	[_displayLink addToRunLoop: [NSRunLoop currentRunLoop] forMode: NSDefaultRunLoopMode];
+	[tmpDisplayLink addToRunLoop: [NSRunLoop currentRunLoop] forMode: NSDefaultRunLoopMode];
 }
 
 - (void) littlePixelDied
 {
-	[_displayLink invalidate];
     [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    DLog(@"CurrentGameplayView reference count %i", _currentGameplayView.retainCount);
+    //DLog(@"CurrentGameplayView reference count %i", _currentGameplayView.retainCount);
     
     UIButton *tmpRestartButton = [UIButton buttonWithType: UIButtonTypeCustom];
     [tmpRestartButton setFrame: CGRectMake(self.view.center.x - 75, self.view.center.y - 25, 150 , 50)];
     [tmpRestartButton setTitle: @"Little Pixel lives?" forState: UIControlStateNormal];
     [tmpRestartButton setBackgroundColor: [UIColor grayColor]];
-    [tmpRestartButton addTarget: self action: @selector(restart:) forControlEvents: UIControlEventAllTouchEvents];
+    [tmpRestartButton addTarget: self action: @selector(restart:) forControlEvents: UIControlEventTouchUpInside];
     [self.view addSubview: tmpRestartButton];
 }
 
@@ -68,14 +67,15 @@
 {
     [inSender removeFromSuperview];
     
-    CGRect tmpFrame = {0, 0, 320, 480};
-    _currentGameplayView = [[LPBaseGameplayView alloc] initWithFrame: tmpFrame andController: self];
-    [self.view addSubview: _currentGameplayView];
-    [_currentGameplayView release];
+    CGRect tmpFrame = {0, 0, self.view.frame.size.width, self.view.frame.size.height};
+    LPBaseGameplayView *tmpView = [[LPBaseGameplayView alloc] initWithFrame: tmpFrame andController: self];
+    [self.view addSubview: tmpView];
+    [tmpView release];
 	
-    _displayLink = [CADisplayLink displayLinkWithTarget:_currentGameplayView selector: @selector(surviving:)];
-	_displayLink.frameInterval = 1;
-	[_displayLink addToRunLoop: [NSRunLoop currentRunLoop] forMode: NSDefaultRunLoopMode];
+    CADisplayLink *tmpDisplayLink = [CADisplayLink displayLinkWithTarget: tmpView selector: @selector(surviving:)];
+	tmpDisplayLink.frameInterval = 1;
+    
+	[tmpDisplayLink addToRunLoop: [NSRunLoop currentRunLoop] forMode: NSDefaultRunLoopMode];
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,8 +86,6 @@
 
 - (void) dealloc
 {
-    NSRunLoop *tmpCurrentLoop = [NSRunLoop currentRunLoop];
-	[_displayLink removeFromRunLoop: tmpCurrentLoop forMode: NSDefaultRunLoopMode];
     [super dealloc];
 }
 

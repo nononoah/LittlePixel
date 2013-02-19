@@ -12,7 +12,6 @@
 
 @interface LPBaseGameplayViewController : UIViewController
 {
-    LPBaseGameplayView *_currentGameplayView;
 }
 - (void) littlePixelDied;
 @end

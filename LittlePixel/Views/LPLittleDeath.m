@@ -26,8 +26,10 @@
 {
     //xDirection equal 1 or -1
     int xDirection = 1 - 2 * arc4random_uniform(2);
-	self.dx = (inDifficulty - 1) * xDirection;
-    self.dy = inDifficulty;
+    
+	self.dx = (arc4random_uniform(inDifficulty) + 1);
+    self.dx *= xDirection;
+    self.dy = arc4random_uniform(inDifficulty) + 3;
 
 }
 
@@ -39,7 +41,7 @@
 + (CGRect) randomFrame
 {
     CGRect tmpMainScreenRect = [UIScreen mainScreen].bounds;
-    CGFloat tmpWidth = arc4random_uniform(16) + 5;
+    CGFloat tmpWidth = arc4random_uniform(16) + 10;
     CGFloat tmpHeight = tmpWidth;
     CGRect rtnRect = CGRectMake(tmpMainScreenRect.size.width - arc4random_uniform(tmpMainScreenRect.size.width +1) + tmpWidth / 2,
                                 tmpHeight / 2,
